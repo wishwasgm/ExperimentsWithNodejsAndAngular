@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" ng-app="todoApp">
+  <head>
+    <title>TODO App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-responsive.min.css">
+    
+    <style>
+      body {
+        padding-top: 20px;
+      }
+    </style>
+     
+  </head>
+  <body>
+  <div class="jumbotron text-center">  <h1>TODO - App</h1></div>
+    <div ng-controller="ctrller">
+      <table class="table table-bordered">
+        <tr ng-repeat="todo in todos">
+          <td>{{ todo.name }}</td>
+          <td>{{ todo.desc }}</td>
+          <td><button type = "submit" ng-click="delete_todo(todo.name)">Delete Todo</button></td>
+        </tr>
+      </table>
+    </div>
+ <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
+ <script src=js/ctrller.js></script>
+    
+  </body>
+</html>
